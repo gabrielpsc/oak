@@ -11,16 +11,16 @@ provider "oci" {
 
 resource "oci_core_vcn" "vcn1" {
   cidr_block     = "172.20.0.0/16"
-  dns_label      = "vcnwebinar"
+  dns_label      = "vcndemotdc"
   compartment_id = "${var.compartment_ocid}"
-  display_name   = "VCN WEBINAR RM"
+  display_name   = "Demo TDC"
 }
 
 // A regional subnet will not specify an Availability Domain
-resource "oci_core_subnet" "Subnet_Webinar" {
+resource "oci_core_subnet" "Subnet_DemoTDC" {
   cidr_block        = "172.20.0.0/24"
-  display_name      = "Subnet_Webinar_RM"
-  dns_label         = "SubnetWebinar"
+  display_name      = "Subnet_DemoTDC_RM"
+  dns_label         = "SubnetDemoTDC"
   compartment_id    = "${var.compartment_ocid}"
   vcn_id            = "${oci_core_vcn.vcn1.id}"
   security_list_ids = ["${oci_core_vcn.vcn1.default_security_list_id}"]
@@ -129,6 +129,6 @@ resource "oci_database_autonomous_database" "test_autonomous_database" {
     cpu_core_count = "1"
     data_storage_size_in_tbs = "1"
     db_name = "orcl"
-    display_name = "Webinar Resource Manager"
+    display_name = "Demo TDC Resource Manager"
     db_workload = "DW"
 }
