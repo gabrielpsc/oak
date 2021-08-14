@@ -9,7 +9,7 @@ provider "oci" {
   region           = "${var.region}"
 }
 
-resource "oci_core_vcn" "vcn001" {
+resource "oci_core_vcn" "vcn1" {
   cidr_block     = "172.20.0.0/16"
   dns_label      = "vcnwebinar"
   compartment_id = "${var.compartment_ocid}"
