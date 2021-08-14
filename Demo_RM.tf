@@ -122,7 +122,7 @@ resource "oci_core_default_security_list" "default_security_list" {
   }
 }
 
-resource "oci_database_autonomous_database" "test_autonomous_database" {
+resource "oci_database_autonomous_database" "tdc_autonomous_database" {
     #Required
     admin_password = "Q1w2e3r4t5Y6*"
     compartment_id = "${var.compartment_ocid}"
