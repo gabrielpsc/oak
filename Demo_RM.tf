@@ -17,10 +17,10 @@ resource "oci_core_vcn" "vcn1" {
 }
 
 // A regional subnet will not specify an Availability Domain
-resource "oci_core_subnet" "Subnet_DemoTDC" {
+resource "oci_core_subnet" "Subnet00" {
   cidr_block        = "172.20.0.0/24"
-  display_name      = "Subnet_DemoTDC_RM"
-  dns_label         = "SubnetDemoTDC"
+  display_name      = "Subnet00"
+  dns_label         = "Subnet00"
   compartment_id    = "${var.compartment_ocid}"
   vcn_id            = "${oci_core_vcn.vcn1.id}"
   security_list_ids = ["${oci_core_vcn.vcn1.default_security_list_id}"]
