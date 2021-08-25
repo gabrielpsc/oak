@@ -13,7 +13,7 @@ resource "oci_core_vcn" "vcn1" {
   cidr_block     = "172.20.0.0/16"
   dns_label      = "vcndemotdc"
   compartment_id = "${var.compartment_ocid}"
-  display_name   = "VCNDemo-TDC"
+  display_name   = "TDC1234"
 }
 
 // A regional subnet will not specify an Availability Domain
