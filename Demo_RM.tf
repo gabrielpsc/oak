@@ -10,7 +10,7 @@ provider "oci" {
 }
 
 resource "oci_core_vcn" "vcn1" {
-  cidr_block     = "172.20.0.0/16"
+  cidr_block     = "172.30.0.0/16"
   dns_label      = "rmwebinar"
   compartment_id = "${var.compartment_ocid}"
   display_name   = "RM Webinar"
