@@ -10,7 +10,7 @@ provider "oci" {
 }
 
 resource "oci_core_vcn" "vcn1" {
-  cidr_block     = "172.30.0.0/16"
+  cidr_block     = "172.40.0.0/16"
   dns_label      = "rmwebinar"
   compartment_id = "${var.compartment_ocid}"
   display_name   = "RM Webinar"
@@ -18,7 +18,7 @@ resource "oci_core_vcn" "vcn1" {
 
 // A regional subnet will not specify an Availability Domain
 resource "oci_core_subnet" "Subnet_Demo" {
-  cidr_block        = "172.30.0.0/24"
+  cidr_block        = "172.40.0.0/24"
   display_name      = "Subnet_Demo_RM"
   dns_label         = "SubnetDemo"
   compartment_id    = "${var.compartment_ocid}"
