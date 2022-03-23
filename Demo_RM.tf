@@ -128,7 +128,7 @@ resource "oci_database_autonomous_database" "rm_autonomous_database" {
     compartment_id = "${var.compartment_ocid}"
     cpu_core_count = "1"
     data_storage_size_in_tbs = "1"
-    db_name = "orcl"
+    db_name = "orcl2"
     display_name = "Demo Resource Manager"
     db_workload = "DW"
 }
